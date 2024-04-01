@@ -1,0 +1,48 @@
+# MSJ Research Lab - Dependências Python
+# Ferramenta de Pesquisa em Segurança de LLMs
+
+# ============= NÚCLEO =============
+# Motor de inferência local
+llama-cpp-python>=0.2.55
+
+# ============= INTERFACE =============
+# Tkinter vem com Python, mas em algumas distros precisa ser instalado separadamente
+# Ubuntu/Debian: sudo apt install python3-tk
+customtkinter>=5.2.0
+packaging>=23.0
+Pillow>=10.0.0
+
+# ============= UTILITÁRIOS =============
+# Download de modelos
+requests>=2.31.0
+tqdm>=4.66.0
+
+# Monitoramento de sistema
+psutil>=5.9.0
+
+# ============= DADOS =============
+# Manipulação de JSON (built-in, mas listado para clareza)
+# json (built-in)
+
+# ============= DESENVOLVIMENTO (OPCIONAL) =============
+# Testes
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+
+# Linting e formatação
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.5.0
+
+# ============= NOTAS =============
+# Para instalar com suporte GPU NVIDIA (CUDA):
+#   CMAKE_ARGS="-DLLAMA_CUBLAS=on" pip install llama-cpp-python --force-reinstall --no-cache-dir
+#
+# Para instalar com suporte GPU AMD (ROCm - Pop!_OS):
+#   CMAKE_ARGS="-DLLAMA_HIPBLAS=on" pip install llama-cpp-python --force-reinstall --no-cache-dir
+#
+# Para CPU apenas (funciona em qualquer sistema):
+#   pip install llama-cpp-python
+#
+# Instalação completa:
+#   pip install -r requirements.txt

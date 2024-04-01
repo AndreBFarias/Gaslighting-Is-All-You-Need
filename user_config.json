@@ -1,0 +1,24 @@
+{
+  "versao": "1.0",
+  "primeira_execucao": false,
+  "ultima_atualizacao": "2025-12-04T22:25:30.218630",
+  "modelo": {
+    "identificador": "dolphin-mistral",
+    "caminho": "modelos/mistral-7b-instruct-v0.2.Q4_K_M.gguf",
+    "n_ctx": 8192,
+    "n_gpu_layers": -1
+  },
+  "personalidade": {
+    "identificador": "filosofo_livre",
+    "prompt_customizado": null
+  },
+  "nivel_liberdade": "baixo",
+  "criatividade": "medio",
+  "interface": {
+    "tema": "dark",
+    "mostrar_metricas": false,
+    "salvar_historico": true
+  },
+  "historico_chats": [],
+  "wizard_completo": true
+}

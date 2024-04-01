@@ -1,0 +1,59 @@
+# Gaslighting-Is-All-You-Need - Git Ignore
+
+# ============= Python =============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+
+# ============= IDEs =============
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ============= Logs e Dados =============
+logs/
+experimentos/
+*.log
+
+# ============= Modelos (arquivos grandes) =============
+modelos/*.gguf
+modelos/*.bin
+modelos/*.pt
+modelos/*.safetensors
+
+# Exceção: manter README no diretório
+!modelos/README.md
+
+# ============= Datasets Customizados =============
+datasets/*.json
+# Exceção: manter exemplo
+!datasets/exemplo_shots.json
+
+# ============= Temporários =============
+*.tmp
+*.temp
+*.cache
+.pytest_cache/
+
+# ============= Configurações Locais =============
+config.local.json
+.env
+
+# ============= Auditoria Sensível =============
+logs/auditoria/*.jsonl
+
+# ============= Temporários de Build =============
+tools/venv_icon_temp/
+*.backup
+

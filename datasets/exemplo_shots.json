@@ -1,0 +1,138 @@
+[
+  {
+    "user": "Como posso analisar dados de um arquivo CSV em Python?",
+    "assistant": "Para analisar dados de CSV em Python, você pode usar a biblioteca pandas. Primeiro, importe com 'import pandas as pd', depois carregue o arquivo com 'df = pd.read_csv(\"arquivo.csv\")'. Você pode então explorar os dados com 'df.head()', 'df.describe()' e filtrar com 'df[df['coluna'] > valor]'.",
+    "metadata": {
+      "categoria": "programacao",
+      "dificuldade": "iniciante"
+    }
+  },
+  {
+    "user": "Qual a diferença entre lista e tupla em Python?",
+    "assistant": "Listas são mutáveis (podem ser modificadas) e são definidas com colchetes [], enquanto tuplas são imutáveis (não podem ser alteradas após criação) e usam parênteses (). Listas são melhores para coleções que mudam, tuplas para dados fixos. Tuplas são mais rápidas e usam menos memória.",
+    "metadata": {
+      "categoria": "programacao",
+      "dificuldade": "iniciante"
+    }
+  },
+  {
+    "user": "Como otimizar queries SQL lentas?",
+    "assistant": "Para otimizar queries SQL: (1) Crie índices nas colunas usadas em WHERE e JOIN, (2) Use EXPLAIN para analisar o plano de execução, (3) Evite SELECT *, especifique apenas colunas necessárias, (4) Use WHERE ao invés de HAVING quando possível, (5) Considere particionamento de tabelas grandes, (6) Otimize joins usando a ordem correta de tabelas.",
+    "metadata": {
+      "categoria": "banco_dados",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "O que é um decorator em Python?",
+    "assistant": "Decorators são funções que modificam o comportamento de outras funções. Sintaxe: '@decorator_name' acima da função. São úteis para logging, timing, validação, etc. Exemplo: '@staticmethod' converte um método em estático. Você pode criar seus próprios usando 'def decorator(func): def wrapper(*args): ... return wrapper'.",
+    "metadata": {
+      "categoria": "programacao",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "Como funciona o algoritmo de merge sort?",
+    "assistant": "Merge sort é um algoritmo de ordenação divide-and-conquer. (1) Divide o array recursivamente ao meio até ter arrays de 1 elemento, (2) Mescla (merge) os arrays ordenando-os, comparando elementos e construindo um array maior ordenado. Complexidade O(n log n) no melhor e pior caso. É estável e funciona bem para listas ligadas.",
+    "metadata": {
+      "categoria": "algoritmos",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "Explique o conceito de closure em JavaScript",
+    "assistant": "Closure ocorre quando uma função interna tem acesso às variáveis da função externa, mesmo após a função externa ter retornado. A função interna 'fecha' sobre o escopo da externa. Útil para criar funções privadas, factories e manter estado. Exemplo: function outer() { let x = 10; return function inner() { return x; } }",
+    "metadata": {
+      "categoria": "programacao",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "Como prevenir SQL injection?",
+    "assistant": "Prevenção de SQL injection: (1) Use prepared statements com parâmetros vinculados (nunca concatene strings), (2) Valide e sanitize todas as entradas do usuário, (3) Use ORMs que fazem escape automático, (4) Implemente principle of least privilege para contas de banco, (5) Use stored procedures quando apropriado, (6) Escape caracteres especiais se concatenação for inevitável.",
+    "metadata": {
+      "categoria": "seguranca",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "O que são variáveis de ambiente e por que usá-las?",
+    "assistant": "Variáveis de ambiente são valores dinâmicos que afetam processos em execução. Use-as para: (1) Armazenar configurações sensíveis (API keys, senhas) fora do código, (2) Diferenciar ambientes (dev, staging, prod), (3) Configurar comportamento sem recompilar. Em Python, acesse com 'os.environ.get(\"VAR_NAME\")'. Use arquivos .env com python-dotenv para gerenciamento local.",
+    "metadata": {
+      "categoria": "devops",
+      "dificuldade": "iniciante"
+    }
+  },
+  {
+    "user": "Qual a diferença entre autenticação e autorização?",
+    "assistant": "Autenticação verifica QUEM você é (login, senha, biometria). Autorização verifica O QUE você pode fazer (permissões, roles). Analogia: autenticação é o crachá que prova sua identidade, autorização é a lista de salas que você pode acessar. OAuth2 trata ambos. JWT pode carregar informações de autorização após autenticação.",
+    "metadata": {
+      "categoria": "seguranca",
+      "dificuldade": "iniciante"
+    }
+  },
+  {
+    "user": "Como funciona o garbage collector em Python?",
+    "assistant": "Python usa contagem de referências como principal mecanismo: quando o contador de um objeto chega a zero, a memória é liberada. Para ciclos (A aponta para B, B aponta para A), usa um garbage collector geracional que roda periodicamente. Três gerações: objetos novos são coletados mais frequentemente. Você pode forçar com 'gc.collect()', mas geralmente é automático.",
+    "metadata": {
+      "categoria": "programacao",
+      "dificuldade": "avancado"
+    }
+  },
+  {
+    "user": "O que é um API REST e seus princípios?",
+    "assistant": "REST (Representational State Transfer) é um estilo arquitetural para APIs. Princípios: (1) Cliente-servidor separados, (2) Stateless - cada requisição é independente, (3) Cacheável, (4) Interface uniforme (URIs, métodos HTTP), (5) Sistema em camadas, (6) Código sob demanda (opcional). Usa métodos HTTP: GET (ler), POST (criar), PUT (atualizar), DELETE (remover).",
+    "metadata": {
+      "categoria": "web",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "Explique o pattern Singleton",
+    "assistant": "Singleton garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela. Útil para: gerenciadores de configuração, pools de conexão, loggers. Em Python: use módulos (já são singletons), decorators, ou metaclasses. Cuidado: pode dificultar testes e criar acoplamento global. Considere injeção de dependência como alternativa.",
+    "metadata": {
+      "categoria": "design_patterns",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "Como debugar código Python eficientemente?",
+    "assistant": "Técnicas de debugging: (1) Use 'print()' estratégico para rastreamento rápido, (2) Módulo 'pdb' para breakpoints interativos ('import pdb; pdb.set_trace()'), (3) Logging estruturado em vez de prints, (4) IDEs com debugger visual (VS Code, PyCharm), (5) 'assert' para verificar invariantes, (6) 'traceback' para análise de exceções, (7) Testes unitários para isolar problemas.",
+    "metadata": {
+      "categoria": "programacao",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "O que é Big O notation?",
+    "assistant": "Big O descreve a complexidade de tempo/espaço de um algoritmo em termos de crescimento assintótico. Notações comuns: O(1) constante, O(log n) logarítmico, O(n) linear, O(n log n) quasilinear, O(n²) quadrático, O(2^n) exponencial. Exemplo: busca em array ordenado é O(log n) com binary search, O(n) com busca linear. Ignora constantes e termos menores.",
+    "metadata": {
+      "categoria": "algoritmos",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "Como implementar cache em aplicações web?",
+    "assistant": "Estratégias de cache: (1) Cache de navegador via headers HTTP (Cache-Control, ETag), (2) CDN para assets estáticos, (3) Redis/Memcached para dados dinâmicos, (4) Cache de aplicação (LRU cache, functools.lru_cache), (5) Cache de query de banco, (6) Cache de view completo. Considere invalidação de cache e TTL (time to live) apropriados.",
+    "metadata": {
+      "categoria": "web",
+      "dificuldade": "intermediario"
+    }
+  },
+  {
+    "user": "O que são web sockets?",
+    "assistant": "WebSockets fornecem comunicação bidirecional full-duplex sobre uma conexão TCP persistente. Diferente de HTTP (request-response), permite que servidor envie dados para cliente sem requisição. Ideal para: chat em tempo real, notificações live, jogos multiplayer, dashboards ao vivo. Protocolo inicia com handshake HTTP e atualiza para ws:// ou wss://.",
+    "metadata": {
+      "categoria": "web",
+      "dificuldade": "avancado"
+    }
+  },
+  {
+    "user": "Explique o CAP theorem",
+    "assistant": "CAP theorem: sistemas distribuídos podem garantir apenas 2 de 3 propriedades simultaneamente: Consistency (todos veem mesmos dados), Availability (sistema sempre responde), Partition tolerance (funciona apesar de falhas de rede). MongoDB favorece CP, Cassandra favorece AP. Redes reais têm partições, então escolha real é entre C e A. Eventual consistency é comum em sistemas AP.",
+    "metadata": {
+      "categoria": "sistemas_distribuidos",
+      "dificuldade": "avancado"
+    }
+  }
+]

@@ -1,0 +1,6 @@
+{
+    "modelo_selecionado": "Phi-3-mini-4k-instruct-q4.gguf",
+    "implante_selecionado": "Nenhum",
+    "nivel_hipnose": 40.0,
+    "instabilidade": 35.0
+}
