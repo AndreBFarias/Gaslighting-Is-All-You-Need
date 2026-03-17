@@ -532,7 +532,6 @@ grep "^from\|^import" src/soul/consciencia.py | sort
 
 ---
 
-**Assinatura:** Claude Code (Opus 4.5)
 **Data:** 2025-12-30
 
 > "Qualquer idiota consegue escrever codigo que um computador entende.
